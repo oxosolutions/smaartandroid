@@ -1,0 +1,13 @@
+<div class="row answer_row">
+	<div class="col">
+		<ul>
+			<label ng-repeat="opt in $parent.checkboxOptions">
+				<li>
+					<h4>
+						<label><input type="checkbox" name="checkbox" ng-model="$parent.$parent.checkboxAnswer[opt.option_value]" >{{opt.option_value}}</label>
+					</h4>
+				</li>
+			</label>
+		</ul>
+	</div>
+</div>

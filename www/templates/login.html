@@ -1,0 +1,27 @@
+<ion-view view-title="Login" style="background: url('img/login-bg1.jpg'); background-position: 0px -100px;">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+  <ion-content>
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>        
+    <div class="logoDiv">
+        <img src="img/icon.png" class="loginLogo" />
+    </div>
+
+    <div class="list list-inset loginDiv" ng-style="{'margin-top':'20%'}">
+      <label class="item item-input loginLabel">
+        <input type="text" placeholder="Username or Email" name="email" ng-model="data.email">
+      </label>
+      <label class="item item-input loginLabelPass">
+        <input type="password" placeholder="Password" name="password" ng-model="data.password">
+      </label>
+    </div>
+    <button class="button button-positive button-block" style="width:90%; margin: 0 auto; margin-top: 2%;" ng-click="doLogin()">Login Now</button>
+
+  </ion-content>
+</ion-view>
